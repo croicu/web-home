@@ -1,6 +1,6 @@
 # ARCHITECTURE.md
 
-Modules, data flow, and contracts for `__project_name__`.
+Modules, data flow, and contracts for `web-home`.
 
 ## Modules
 

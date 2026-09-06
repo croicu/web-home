@@ -1,8 +1,8 @@
 {
-  "name": "x__project_name__x",
+  "name": "web-home",
   "private": true,
   "version": "0.1.0",
-  "description": "__description__",
+  "description": "Landing page for croicu.com",
   "type": "module",
   "scripts": {
     "dev": "vite",

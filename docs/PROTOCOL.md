@@ -1,6 +1,6 @@
 # PROTOCOL.md
 
-URL query-string surface and file/wire format schemas for `__project_name__`.
+URL query-string surface and file/wire format schemas for `web-home`.
 
 ## Query string
 

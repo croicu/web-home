@@ -1,14 +1,8 @@
-# __project_name__
+# web-home
 
-__description__
+Landing page for croicu.com
 
 ---
-
-## Setup
-
-This repo was generated from a template and still contains placeholder tokens
-(`__project_name__`, `__description__`, `__mission__`). See
-[tasks/repo_setup.md](tasks/repo_setup.md) for replacement instructions.
 
 ## Install
 

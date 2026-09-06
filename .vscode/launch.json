@@ -2,19 +2,19 @@
   "version": "0.2.0",
   "configurations": [
     {
+      "name": "Chrome: Open index.html",
+      "type": "chrome",
+      "request": "launch",
+      "url": "http://localhost:5173",
+      "webRoot": "${workspaceFolder}"
+    },
+    {
       "name": "Vite: Dev Server",
       "type": "node",
       "request": "launch",
       "runtimeExecutable": "npm",
       "runtimeArgs": ["run", "dev"],
       "console": "integratedTerminal"
-    },
-    {
-      "name": "Chrome: Attach to Dev Server",
-      "type": "chrome",
-      "request": "launch",
-      "url": "http://localhost:5173",
-      "webRoot": "${workspaceFolder}"
     },
     {
       "name": "Vitest: Run Current File",

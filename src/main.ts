@@ -7,7 +7,7 @@ function bootstrap(): void {
 
     const root = document.querySelector<HTMLDivElement>("#app");
     if (root) {
-        root.innerHTML = "<h1>__project_name__</h1>";
+        root.innerHTML = "<h1>web-home</h1>";
     }
 
     logger.info("app.bootstrap.end");

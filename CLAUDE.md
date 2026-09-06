@@ -4,14 +4,16 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Mission
 
-__mission__
+`web-home` is the static landing page served at the croicu.com domain. For now it's a single
+static page: no client-side JavaScript, no outbound links — just a page of visual art. The
+project scaffold (TypeScript build, logging/runtime plumbing, test suite) is kept in place from
+the template for future growth, but nothing on the shipped page currently depends on it.
 
 ## Template Sync
 
 - **Source**: [croicu/tpl-ts](https://github.com/croicu/tpl-ts)
-- **Synced to**: <!-- SYNCED_TO --> (set by `tasks/repo_setup.md` at instantiation time; left
-  unset in `tpl-ts`'s own master copy of this file, since the source has nothing to sync
-  against)
+- **Synced to**: 2026-09-06 (`tpl-ts`'s addendum was empty at instantiation time, so this is the
+  instantiation date itself)
 
 This repo is either `tpl-ts` itself or was generated from it. `tpl-ts`'s `ADDENDUM.md` is a
 curated, timestamped log of changes meant for downstream instances (new/changed rules,
@@ -319,8 +321,5 @@ Folder provides namespace; class uses the simplest meaningful name (e.g. `runtim
 ## New Task
 
 ## Pending Tasks
-- **File**: [Repo Setup](tasks/repo_setup.md)
-- **Status**: Implementation
-- **Key Context**: This repo was generated from a template and still contains placeholder tokens. Replace them per that file's instructions, then delete it and this entry.
 
 ## Completed Tasks

@@ -2,12 +2,13 @@ name: CI
 
 on:
   push:
-    branches: [main]
+    branches-ignore: [main]
   pull_request:
     branches: [main]
 
 jobs:
-  typecheck-and-test:
+  ci:
+    name: Typecheck, test, build
     runs-on: ubuntu-latest
 
     steps:

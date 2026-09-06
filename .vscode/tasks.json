@@ -1,0 +1,50 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "install",
+      "type": "shell",
+      "command": "npm install",
+      "problemMatcher": []
+    },
+    {
+      "label": "dev",
+      "type": "shell",
+      "command": "npm run dev",
+      "isBackground": true,
+      "problemMatcher": []
+    },
+    {
+      "label": "build",
+      "type": "shell",
+      "command": "npm run build",
+      "problemMatcher": []
+    },
+    {
+      "label": "typecheck",
+      "type": "shell",
+      "command": "npm run typecheck",
+      "problemMatcher": ["$tsc"]
+    },
+    {
+      "label": "test",
+      "type": "shell",
+      "command": "npm run test:run",
+      "problemMatcher": []
+    },
+    {
+      "label": "zap",
+      "type": "shell",
+      "windows": {
+        "command": "rmdir /s /q node_modules"
+      },
+      "linux": {
+        "command": "rm -rf node_modules"
+      },
+      "osx": {
+        "command": "rm -rf node_modules"
+      },
+      "problemMatcher": []
+    }
+  ]
+}

@@ -1,0 +1,21 @@
+# Build artifacts
+dist/
+dist-ssr/
+*.local
+
+# Dependencies
+node_modules/
+
+# Test artifacts
+coverage/
+
+# Editor directories and files
+.idea
+.DS_Store
+*.suo
+*.ntvs*
+*.njsproj
+*.sw?
+
+# Claude Code
+.claude/

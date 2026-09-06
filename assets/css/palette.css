@@ -1,0 +1,47 @@
+/*
+ * A 32-step blackbody radiation scale, sampled from 700K (the Draper point,
+ * where a heated object first becomes visible) to 20,000K (a clear sky at
+ * zenith), evenly spaced along the same axis as the strip it was drawn from:
+ * linear in kelvin below 1,500K, linear in mired (10^6 / K) above it, with
+ * color from a standard empirical fit to the Planckian locus (Tanner
+ * Helland's RGB approximation) and brightness ramped toward black near the
+ * Draper point, since that fit alone never dims no matter how cold it's fed.
+ *
+ * --bb-01 is the coldest stop (near-black), --bb-32 the bluest.
+ * Not yet linked from index.html -- reference tokens, not wired-in colors.
+ */
+
+:root {
+  --bb-01: #000000; /* 700 K */
+  --bb-02: #0b0200; /* 861 K */
+  --bb-03: #270b00; /* 1,023 K */
+  --bb-04: #501b00; /* 1,184 K */
+  --bb-05: #7e3000; /* 1,345 K */
+  --bb-06: #ab4900; /* 1,502 K */
+  --bb-07: #ba5200; /* 1,558 K */
+  --bb-08: #ca5c00; /* 1,617 K */
+  --bb-09: #d96600; /* 1,682 K */
+  --bb-10: #e77000; /* 1,751 K */
+  --bb-11: #f37a00; /* 1,827 K */
+  --bb-12: #fb8201; /* 1,910 K */
+  --bb-13: #ff890e; /* 2,000 K */
+  --bb-14: #ff8e1b; /* 2,100 K */
+  --bb-15: #ff9328; /* 2,210 K */
+  --bb-16: #ff9836; /* 2,332 K */
+  --bb-17: #ff9e43; /* 2,468 K */
+  --bb-18: #ffa451; /* 2,621 K */
+  --bb-19: #ffaa5f; /* 2,794 K */
+  --bb-20: #ffb16d; /* 2,992 K */
+  --bb-21: #ffb87c; /* 3,221 K */
+  --bb-22: #ffc08c; /* 3,487 K */
+  --bb-23: #ffc99d; /* 3,800 K */
+  --bb-24: #ffd2ae; /* 4,176 K */
+  --bb-25: #ffdcc1; /* 4,635 K */
+  --bb-26: #ffe8d5; /* 5,206 K */
+  --bb-27: #fff5eb; /* 5,938 K */
+  --bb-28: #f6f4ff; /* 6,910 K */
+  --bb-29: #dae4ff; /* 8,261 K */
+  --bb-30: #c8d9ff; /* 10,271 K */
+  --bb-31: #b9d0ff; /* 13,572 K */
+  --bb-32: #abc6ff; /* 20,000 K */
+}

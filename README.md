@@ -38,14 +38,12 @@ npm run preview    # preview dist/ locally
 
 ## Deploy
 
-Hosted on Cloudflare Workers (static assets), connected via Git integration in the Cloudflare
-dashboard: every push/merge to `main` builds (`npm run build`) and deploys (`npx wrangler deploy`)
-automatically, serving `dist/` per `wrangler.jsonc`'s `assets.directory`. No manual deploy step is
-needed for normal changes.
-
-To deploy manually from a local checkout:
+Hosted on Cloudflare Pages, deployed by `.github/workflows/cd.yaml`'s `deploy` job on every push
+of a `v*` tag: builds `dist/` and runs `wrangler pages deploy dist --project-name=web-home`,
+authenticated via the `CLOUDFLARE_API_TOKEN` / `CLOUDFLARE_ACCOUNT_ID` repo secrets (same model as
+`geo-browser`). Push a tag to deploy:
 
 ```bash
-npm run build
-npx wrangler deploy
+git tag v0.1.0
+git push origin v0.1.0
 ```

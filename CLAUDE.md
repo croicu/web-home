@@ -12,8 +12,8 @@ the template for future growth, but nothing on the shipped page currently depend
 ## Template Sync
 
 - **Source**: [croicu/tpl-ts](https://github.com/croicu/tpl-ts)
-- **Synced to**: 2026-09-06 (`tpl-ts`'s addendum was empty at instantiation time, so this is the
-  instantiation date itself)
+- **Synced to**: 2026-09-06 (through the "Optional repo-security lockdown task" addendum entry --
+  applied the same day it was written, since this repo was the one that prompted writing it)
 
 This repo is either `tpl-ts` itself or was generated from it. `tpl-ts`'s `ADDENDUM.md` is a
 curated, timestamped log of changes meant for downstream instances (new/changed rules,
@@ -36,6 +36,23 @@ protocol below applies depends on which repo you're in.
    (filename prefixed with an ISO timestamp) describing what changed, why, and what an instance
    should do about it.
 2. Append a row to `ADDENDUM.md`'s table (timestamp, title, filename).
+
+## Repo Security
+
+`main` is branch-protected (applied 2026-09-06, matching `geo-browser`'s model; see
+[tasks/secure_repo.md](tasks/secure_repo.md) for the steps and the exact settings):
+
+- A PR is required to merge into `main` -- direct pushes are rejected, **including for the repo
+  owner** (`enforce_admins` is on).
+- The `Typecheck, test, build` CI check must pass before merging (`.github/workflows/ci.yaml`).
+- No force-pushes, no branch deletion.
+- 0 approvals are required (solo maintainer) -- the PR gate itself, plus the CI check, is the
+  protection; raise the approval count if the repo ever gets other contributors.
+
+Practical effect on the workflow above and in "Before committing": every change, including a
+one-line doc fix, now goes `git checkout -b <branch>` → commit → `git push -u origin <branch>` →
+`gh pr create` → wait for the CI check → `gh pr merge` (or merge in the GitHub UI), rather than a
+direct commit to `main`.
 
 ## Cross-Repo Coordination
 

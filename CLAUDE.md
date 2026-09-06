@@ -12,8 +12,8 @@ the template for future growth, but nothing on the shipped page currently depend
 ## Template Sync
 
 - **Source**: [croicu/tpl-ts](https://github.com/croicu/tpl-ts)
-- **Synced to**: 2026-09-06 (through the "Optional repo-security lockdown task" addendum entry --
-  applied the same day it was written, since this repo was the one that prompted writing it)
+- **Synced to**: 2026-09-06T2 (through the "Optional Cloudflare Pages deploy task" addendum entry
+  -- applied the same day it was written, since this repo was the one that prompted writing it)
 
 This repo is either `tpl-ts` itself or was generated from it. `tpl-ts`'s `ADDENDUM.md` is a
 curated, timestamped log of changes meant for downstream instances (new/changed rules,
@@ -53,6 +53,21 @@ Practical effect on the workflow above and in "Before committing": every change,
 one-line doc fix, now goes `git checkout -b <branch>` → commit → `git push -u origin <branch>` →
 `gh pr create` → wait for the CI check → `gh pr merge` (or merge in the GitHub UI), rather than a
 direct commit to `main`.
+
+## Deploy
+
+Hosted on Cloudflare Pages (applied 2026-09-06; see
+[tasks/deploy_cloudflare_pages.md](tasks/deploy_cloudflare_pages.md) for the steps and gotchas):
+
+- `.github/workflows/cd.yaml`'s `deploy` job builds and runs `wrangler pages deploy dist
+  --project-name=web-home` on every `v*` tag push, authenticated via the `CLOUDFLARE_API_TOKEN` /
+  `CLOUDFLARE_ACCOUNT_ID` repo secrets -- same model as `geo-browser`.
+- The `web-home` Pages project was bootstrapped once via `npx wrangler pages project create`,
+  since `wrangler pages deploy` doesn't auto-create a missing project.
+- The `croicu.com` custom domain is attached to the project (Custom domains tab); DNS is
+  auto-managed since the zone lives in the same Cloudflare account.
+
+To ship a new version: `git tag vX.Y.Z && git push origin vX.Y.Z`.
 
 ## Cross-Repo Coordination
 

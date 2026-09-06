@@ -1,16 +1,73 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>web-home</title>
-    <style>
-      html, body {
-        margin: 0;
-        height: 100%;
-        background: radial-gradient(circle at 50% 40%, #1a1a2e, #0a0a12);
-      }
-    </style>
-  </head>
-  <body></body>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#171210" />
+  <meta name="description" content="CROICU" />
+  <title>CROICU</title>
+  <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <main class="landing" aria-label="Croicu landing page">
+    <div class="ambient ambient-left" aria-hidden="true"></div>
+    <div class="ambient ambient-right" aria-hidden="true"></div>
+
+    <section class="mark-wrap">
+      <div class="orbit orbit-outer" aria-hidden="true"></div>
+      <div class="orbit orbit-inner" aria-hidden="true"></div>
+
+      <svg class="mark" viewBox="0 0 320 320" role="img" aria-labelledby="mark-title mark-desc">
+        <title id="mark-title">Croicu mark</title>
+        <desc id="mark-desc">A warm glowing hexagon with six nodes and the letter C at its center.</desc>
+        <defs>
+          <linearGradient id="gold" x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0%" stop-color="#fff1c9" />
+            <stop offset="45%" stop-color="#f4c77c" />
+            <stop offset="100%" stop-color="#c47a3d" />
+          </linearGradient>
+          <filter id="glow" x="-60%" y="-60%" width="220%" height="220%">
+            <feGaussianBlur stdDeviation="5" result="blur" />
+            <feMerge>
+              <feMergeNode in="blur" />
+              <feMergeNode in="SourceGraphic" />
+            </feMerge>
+          </filter>
+        </defs>
+
+        <polygon
+          class="hex-line"
+          points="160,34 269,97 269,223 160,286 51,223 51,97"
+          fill="none"
+          stroke="url(#gold)"
+          stroke-width="2.2"
+        />
+
+        <g fill="#ffe8b6" filter="url(#glow)">
+          <circle cx="160" cy="34" r="7" />
+          <circle cx="269" cy="97" r="7" />
+          <circle cx="269" cy="223" r="7" />
+          <circle cx="160" cy="286" r="7" />
+          <circle cx="51" cy="223" r="7" />
+          <circle cx="51" cy="97" r="7" />
+        </g>
+
+        <text
+          x="160"
+          y="190"
+          text-anchor="middle"
+          class="center-c"
+          fill="url(#gold)">
+          C
+        </text>
+      </svg>
+    </section>
+
+    <h1 class="wordmark" aria-label="Croicu">C R O I C U</h1>
+    <div class="divider" aria-hidden="true"></div>
+
+    <footer>croicu.com</footer>
+  </main>
+</body>
 </html>

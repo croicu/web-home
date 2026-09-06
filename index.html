@@ -3,11 +3,12 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="theme-color" content="#171210" />
+  <meta name="theme-color" content="#270b00" />
   <meta name="description" content="CROICU" />
   <title>CROICU</title>
-  <link rel="icon" href="favicon.svg" type="image/svg+xml" />
-  <link rel="stylesheet" href="styles.css" />
+  <link rel="icon" href="assets/svg/favicon.svg" type="image/svg+xml" />
+  <link rel="stylesheet" href="assets/css/palette.css" />
+  <link rel="stylesheet" href="assets/css/styles.css" />
 </head>
 <body>
   <main class="landing" aria-label="Croicu landing page">
@@ -23,9 +24,9 @@
         <desc id="mark-desc">A warm glowing hexagon with six nodes and the letter C at its center.</desc>
         <defs>
           <linearGradient id="gold" x1="0" y1="0" x2="1" y2="1">
-            <stop offset="0%" stop-color="#fff1c9" />
-            <stop offset="45%" stop-color="#f4c77c" />
-            <stop offset="100%" stop-color="#c47a3d" />
+            <stop offset="0%" style="stop-color: var(--bb-26)" />
+            <stop offset="45%" style="stop-color: var(--bb-21)" />
+            <stop offset="100%" style="stop-color: var(--bb-16)" />
           </linearGradient>
           <filter id="glow" x="-60%" y="-60%" width="220%" height="220%">
             <feGaussianBlur stdDeviation="5" result="blur" />
@@ -44,7 +45,7 @@
           stroke-width="2.2"
         />
 
-        <g fill="#ffe8b6" filter="url(#glow)">
+        <g class="mark-nodes" filter="url(#glow)">
           <circle cx="160" cy="34" r="7" />
           <circle cx="269" cy="97" r="7" />
           <circle cx="269" cy="223" r="7" />

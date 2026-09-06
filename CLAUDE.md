@@ -40,7 +40,7 @@ protocol below applies depends on which repo you're in.
 ## Repo Security
 
 `main` is branch-protected (applied 2026-09-06, matching `geo-browser`'s model; see
-[tasks/secure_repo.md](tasks/secure_repo.md) for the steps and the exact settings):
+[issue #5](https://github.com/croicu/web-home/issues/5) for the steps and the exact settings):
 
 - A PR is required to merge into `main` -- direct pushes are rejected, **including for the repo
   owner** (`enforce_admins` is on).
@@ -57,7 +57,7 @@ direct commit to `main`.
 ## Deploy
 
 Hosted on Cloudflare Pages (applied 2026-09-06; see
-[tasks/deploy_cloudflare_pages.md](tasks/deploy_cloudflare_pages.md) for the steps and gotchas):
+[issue #6](https://github.com/croicu/web-home/issues/6) for the steps and gotchas):
 
 - `.github/workflows/cd.yaml`'s `deploy` job builds and runs `wrangler pages deploy dist
   --project-name=web-home` on every `v*` tag push, authenticated via the `CLOUDFLARE_API_TOKEN` /
@@ -355,3 +355,5 @@ Folder provides namespace; class uses the simplest meaningful name (e.g. `runtim
 ## Pending Tasks
 
 ## Completed Tasks
+- [#5 Lock down main with branch protection](https://github.com/croicu/web-home/issues/5)
+- [#6 Deploy to Cloudflare Pages](https://github.com/croicu/web-home/issues/6)
